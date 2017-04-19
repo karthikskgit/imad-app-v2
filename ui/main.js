@@ -6,7 +6,7 @@ button.onclick=function(){
  var request=new XMLHttpRequest();
  request.onreadystatechange=fuction()
  {
-     if(request,readyState====XMLHttpRequest.DONE)
+     if(request,readyState==XMLHttpRequest.DONE)
      {
          if(request.status===200)
          {
@@ -23,7 +23,7 @@ button.onclick=function(){
          }
          
      }
- };
+ }
  var nameInput=document.getElementById('name');
  var name=nameInput.value;
  request.open('GET','http://http://karthikskgit.imad.hasura-app.io/counter',true);
@@ -33,7 +33,7 @@ button.onclick=function(){
 var submit=docment.getElemenbyId('submit_btn');
 submit.onclick=funcction()
 {
-    var request=new XMLHttpRequest();;
+    var request=new XMLHttpRequest();
     request.onreadystatechange=function()
     {
         if(request.readyState===XMLHttpRequest.DONE)
@@ -55,8 +55,8 @@ submit.onclick=funcction()
     var name=nameInput.value;
     request.open('GET','http://http://karthikskgit.imad.hasura-app.io:/submit-name?name' +name, true);
     request.send(null);
-                };
-            }
-        }
-    }
+                
+            
+        
+
 }
