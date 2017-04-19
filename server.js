@@ -14,10 +14,18 @@ app.get('/counter', function(req,res) {
     res.send(counter.toString());
     
 });
+app.get('i/stylee.css',function(req,res) {
+    res.sendFile(path.join(_dirname,'ui','style.css'));
+    
+}
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+
+app.get('/ui/main.js',function(req,res){
+    re.senFile(path.join(_dirname,'ui','main.js'));
+})
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
