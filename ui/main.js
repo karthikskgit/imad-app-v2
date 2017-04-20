@@ -4,7 +4,8 @@ button.onclick=function(){
     
 
     var request=new XMLHttpRequest();
-    window.alert("hi");
+    alert("hi");
+    
     request.onreadystatechange=function()
     {
         if(request.readyState===XMLHttpRequest.DONE)
@@ -14,7 +15,7 @@ button.onclick=function(){
                 var counter=request.responseText;
                 var counter_int=parseInt(counter);
                 counter_int++;
-                window.alert(counter_int);
+                alert(counter_int);
                 var span=document.getElementById('count');
                 span.innerHTML=counter_int.toString();
                 
