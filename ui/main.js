@@ -14,8 +14,9 @@ button.onclick=function(){
                 var counter=request.responseText;
                 var counter_int=parseInt(counter);
                 counter_int++;
+                window.alert(counter_int);
                 var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
+                span.innerHTML=counter_int.toString();
                 
             }}
     };
