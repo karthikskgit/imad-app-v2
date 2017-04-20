@@ -18,7 +18,7 @@ button.onclick=function(){
             }}
     };
    
-    request.open('GET','http://karthikskgit.imad.hasura-app.io/coounter', true);
+    request.open('GET','http://karthikskgit.imad.hasura-app.io/counter', true);
     request.send(null);
     
 };
