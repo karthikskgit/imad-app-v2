@@ -1,10 +1,10 @@
 var button= document.getElementById('counter');
- alert("hi");
+
 button.onclick=function(){
     
 
     var request=new XMLHttpRequest();
-    alert("hi");
+
     
     request.onreadystatechange=function()
     {
@@ -15,7 +15,6 @@ button.onclick=function(){
                 var counter=request.responseText;
                 var counter_int=parseInt(counter);
                 counter_int++;
-                alert(counter_int);
                 var span=document.getElementById('count');
                 span.innerHTML=counter_int.toString();
                 
