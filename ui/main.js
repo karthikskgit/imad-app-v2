@@ -4,7 +4,7 @@ button.onclick=function(){
     
 
     var request=new XMLHttpRequest();
-    
+    window.alert("hi");
     request.onreadystatechange=function()
     {
         if(request.readyState===XMLHttpRequest.DONE)
