@@ -1,5 +1,5 @@
 var button= document.getElementById('counter');
-
+ alert("hi");
 button.onclick=function(){
     
 
