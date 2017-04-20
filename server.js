@@ -4,10 +4,6 @@ var path = require('path');
 var app=express();
 app.use(morgan('combined'));
 
-
-
-var app = express();
-app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -20,7 +16,7 @@ app.get('/counter', function(req,res) {
 });
 
 var names=[];
-app.get('submit-name/;name',function(req,res) {
+app.get('submit-name',function(req,res) {
     // Getting name from requst
     
     var name=req.params.name;
@@ -33,7 +29,7 @@ app.get('submit-name/;name',function(req,res) {
 
 app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
-    res.send(createTemplate(aarticles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 
