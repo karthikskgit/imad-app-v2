@@ -1,17 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool=require('pg').Pool;
-var crypt=require('crypto');
 
-var config={
-    user:'karthikkgit',
-    database:'karthikskgit'
-    host:'db.hasura-app.io',
-    port:'5432'
-    password:process.env.DB_PASSWORD
-}
-}
+
+};
 
 var app = express();
 app.use(morgan('combined'));
