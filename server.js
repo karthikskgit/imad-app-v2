@@ -19,7 +19,7 @@ var names=[];
 app.get('submit-name',function(req,res) {
     // Getting name from requst
     
-    var name=req.params.name;
+    var name=req.query.name;
     
     names.push(name);
     // json obj notation
