@@ -31,7 +31,7 @@ button.onclick=function(){
 };
 
 var submit=docment.getElemenbyId('submit_btn');
-submit.onclick=funcction()
+submit.onclick=funcction();
 {
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
