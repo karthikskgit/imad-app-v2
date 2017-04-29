@@ -18,7 +18,7 @@ app.get('submit-name',function(req,res) {
     // Getting name from requst
     
     var name=req.query.name;
-    
+    console.log(name);
     names.push(name);
     // json obj notation
     res.send(JSON.stringify(names));
