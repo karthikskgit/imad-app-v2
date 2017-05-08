@@ -8,7 +8,7 @@ var config={
     database:'karthikskgit',
     host:'db.imad.hasura-app.io',
     port: '5432',
-    password: 'github123'
+    password: process.env.DB_HASURA
 };
 
 
@@ -62,10 +62,22 @@ app.get('/submit-name',function(req,res) {
 });
 
 app.get('/:articleName',function(req,res){
-    var articleName=req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+pool.query('SELECT * FROM article WHERE title ='*+req.params.articleName+"'", function(err,result) {
+    if (err){
+        res.status(500).send(err.toString());
+        
+    }else{
+        if(result.roows.length === 0) {
+            res.status(404).send('Article not found');
+            
+        }else {
+            var articleData=result.rows[0];
+            res.send(createTemplate(articleData));
+        }
+        }
+    });
 });
-
+    
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
