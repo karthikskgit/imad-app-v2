@@ -8,7 +8,7 @@ var config={
     database:'karthikskgit',
     host:'db.imad.hasura-app.io',
     port: '5432',
-    password: process.env.DB_HASURA
+    password: github123
 };
 
 
