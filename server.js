@@ -38,6 +38,8 @@ app.get('/counter', function(req,res) {
     counter=counter+1;
     res.send(counter.toString());
     });
+    
+    
 var names=[];
 app.get('/submit-name',function(req,res) {
     // Getting name from requst
@@ -48,6 +50,8 @@ app.get('/submit-name',function(req,res) {
     res.send(JSON.stringify(names));
     
 });
+
+
 
 app.get('/:articleName',function(req,res){
 pool.query('SELECT * FROM article WHERE title ='*+req.params.articleName+"'", function(err,result) {
